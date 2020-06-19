@@ -14,6 +14,12 @@ return false;
 }
 
 string undiamas(int dd, int  mm, int yy){
+    if(mm>12){
+        return "Datos invalidos";}
+        else{
+if(dd>32){
+    return "Datos invalidos";}
+    else {
     dd++;
     if(mm== 1||mm==3||mm==5|| mm==7|| mm== 8||mm== 10|| mm==12){
         if(dd==32){
@@ -25,12 +31,16 @@ string undiamas(int dd, int  mm, int yy){
                 yy++;
 
             }
-            else if (dd>32){
-                return "Datos invalidos";
-            }
+            
         }
     }
-    else if(mm== 4||mm==6||mm==9|| mm==11) {
+
+}
+        
+
+
+    if(mm== 4||mm==6||mm==9|| mm==11) {
+        
             if(dd==31){
                 mm++;
                 dd=1;
@@ -68,6 +78,8 @@ string undiamas(int dd, int  mm, int yy){
         
         return "La fecha mas un dia es: " +to_string(dd)+ "-" +to_string(mm)+"-"+to_string(yy);
     }
+}
+
 
     int main(void){
         int dd, mm, yy;
